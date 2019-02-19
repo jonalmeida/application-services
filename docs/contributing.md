@@ -21,6 +21,17 @@ To work on the code in this repo you will need to be familiar with
 the [Rust](https://www.rust-lang.org/) programming language.
 You can get a working rust compiler and toolchain via [rustup](https://rustup.rs/).
 
+Some components require `openssl` and `sqlcipher` in order to build correctly.
+For local development it is recommended to install these via your OS package
+manager (e.g. via the `libssl-dev` and `sqlcipher-dev` packages on Ubuntu, or
+the `openssl` and `sqlcipher` formulae in Homebrew).  You can check that all
+build dependencies are installed correctly by running the following from the
+root of your checkout:
+
+```
+cargo test --all
+```
+
 If you plan to work on the Android component bindings, you should also review
 the instructions for [setting up an Android build environment](https://github.com/mozilla/application-services/blob/master/docs/howtos/setup-android-build-environment.md)
 
